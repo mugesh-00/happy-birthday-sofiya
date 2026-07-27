@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sofiya ❤️</title>
 
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff4e8a,#ff9ec4);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+animation:pop 1s ease;
+max-width:350px;
+}
+
+h1{
+color:#ff2d75;
+font-size:32px;
+margin-bottom:15px;
+}
+
+p{
+font-size:18px;
+color:#444;
+margin-bottom:20px;
+}
+
+button{
+padding:12px 25px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:#ff2d75;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff0055;
+}
+
+#msg{
+display:none;
+margin-top:20px;
+font-size:20px;
+color:#e91e63;
+font-weight:bold;
+animation:fade 1s;
+}
+
+@keyframes pop{
+from{
+transform:scale(.5);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+@keyframes fade{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h1>🎂 Happy Birthday Sofiya ❤️</h1>
+
+<p>Wishing you endless happiness, smiles and love. ✨</p>
+
+<button onclick="showMessage()">Open Surprise 🎁</button>
+
+<div id="msg">
+💖 You are the most beautiful part of my life. Happy Birthday, Sofiya! ❤️🎉
+</div>
+</div>
+
+<script>
+function showMessage(){
+document.getElementById("msg").style.display="block";
+}
+</script>
+
+</body>
+</html>
