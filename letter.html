@@ -20,18 +20,16 @@ justify-content:center;
 align-items:center;
 min-height:100vh;
 padding:20px;
-overflow-x:hidden;
 }
 
 .letter{
-background:white;
 max-width:700px;
-width:100%;
+background:white;
 padding:30px;
 border-radius:20px;
 box-shadow:0 10px 25px rgba(0,0,0,.2);
+line-height:1.8;
 text-align:center;
-line-height:1.9;
 }
 
 h1{
@@ -40,42 +38,23 @@ margin-bottom:20px;
 }
 
 p{
-font-size:18px;
 color:#444;
+font-size:18px;
 }
 
 button{
-margin-top:25px;
-padding:12px 30px;
-font-size:18px;
-border:none;
-border-radius:30px;
+margin-top:30px;
 background:#ff2d75;
 color:white;
+border:none;
+padding:12px 30px;
+font-size:18px;
+border-radius:30px;
 cursor:pointer;
 }
 
 button:hover{
 background:#ff0a61;
-}
-
-.heart{
-position:fixed;
-top:-40px;
-color:red;
-pointer-events:none;
-animation:fall linear forwards;
-}
-
-@keyframes fall{
-0%{
-transform:translateY(-40px);
-opacity:1;
-}
-100%{
-transform:translateY(110vh);
-opacity:0;
-}
 }
 </style>
 </head>
@@ -88,114 +67,65 @@ opacity:0;
 
 <p>
 
-Happy Birthday, My Beautiful Girl... 🎂❤️
+Happy Birthday, My Love ❤️
 
-Indha letter ezhuthura nerathula enakku evlo emotions irukku nu words-la solla romba kashtam.
+<br><br>
 
-Un birthday-ku expensive gift kudukka mudiyala...
-Aana en idhayathula irukkura unmaiyana anbu dhaan indha surprise.
+Every time I think about you,
+my heart beats a little faster.
 
-Nee en life-la vandhadhukku apram dhaan,
-oruthar namma life-a ivlo azhaga maatha mudiyumnu purinjadhu.
+Every moment I spend talking with you
+becomes one of my most beautiful memories.
 
-Un smile paatha en problems ellam marandhuruven.
-Un message vandha en face-la automatic-ah smile vandhurum.
+<br><br>
 
-Na unna unmaiya nesikkuren. ❤️
+❤️ Sofiya...
 
-Life-la edhu nadandhaalum...
-Na unnai respect pannuven...
-Care pannuven...
-Support pannuven...
-Un happiness-ku reason-a iruka try pannuven.
+I don't know what tomorrow brings...
 
-Indha birthday-la naan kadavul kitta kekkura ore oru wish...
+But I know one thing...
 
-Nee eppovume happy-ah irukanum...
-Healthy-ah irukanum...
-Un face-la smile eppovume irukanum. ❤️
+<br><br>
 
-Happy Birthday Once Again, My Queen... 👑❤️
+<b>I Truly Love You. ❤️</b>
+
+<br><br>
+
+On your birthday,
+I have only one wish...
+
+<br><br>
+
+To make you smile,
+to walk beside you,
+to support you,
+and to stay with you forever.
+
+<br><br>
+
+Thank you for coming into my life.
+
+No matter what happens,
+I will always respect you,
+care for you,
+support you,
+and stand by your side.
+
+<br><br>
+
+❤️ Happy Birthday My Queen ❤️
+
+<br><br>
 
 Forever Yours,
+
+<br><br>
 
 <b>Mugesh ❤️</b>
 
 </p>
 
-<button onclick="nextPage()">
-Continue ❤️
-</button>
-
-</div>
-
-<audio id="bgMusic" loop>
-<source src="music/love.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-
-const music=document.getElementById("bgMusic");
-
-function startMusic(){
-music.play().catch(()=>{});
-}
-
-document.addEventListener("click",startMusic,{once:true});
-document.addEventListener("touchstart",startMusic,{once:true});
-
-function nextPage(){
-music.play().catch(()=>{});
-setTimeout(()=>{
-window.location.href="propose.html";
-},500);
-}
-
-setInterval(()=>{
-
-const heart=document.createElement("div");
-
-heart.className="heart";
-
-heart.innerHTML="❤️";
-
-heart.style.left=Math.random()*100+"vw";
-
-heart.style.fontSize=(15+Math.random()*20)+"px";
-
-heart.style.animationDuration=(4+Math.random()*3)+"s";
-
-document.body.appendChild(heart);
-
-setTimeout(()=>{
-heart.remove();
-},7000);
-
-},350);
-
-</script>
-
-</body>
-</html>
-En memories-ku meaning kuduthadhukku...
-En heart-ku ivlo love feel panna vachadhukku...
-
-Once Again...
-
-🎂 Happy Birthday, My Queen... 👑❤️
-
-I Love You...
-Yesterday...
-Today...
-Tomorrow...
-And Forever... ❤️
-
-With all my love,
-
-<b>Forever Yours,<br>Mugesh ❤️</b>
-
-</p>
-<button onclick="location.href='Proposal.html'">
+<button onclick="location.href='propose.html'">
 Continue ❤️
 </button>
 
