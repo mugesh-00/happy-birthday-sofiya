@@ -23,38 +23,32 @@ overflow:hidden;
 }
 
 .card{
-background:#fff;
+background:white;
 padding:30px;
 border-radius:20px;
 text-align:center;
-max-width:360px;
-width:90%;
+max-width:350px;
 box-shadow:0 10px 25px rgba(0,0,0,.2);
-animation:pop .8s;
 }
 
 h1{
 color:#ff2d75;
 margin-bottom:15px;
-font-size:32px;
 }
 
 p{
 color:#555;
-font-size:18px;
-margin-bottom:25px;
-line-height:1.6;
+margin-bottom:20px;
 }
 
 button{
-padding:12px 28px;
-font-size:18px;
-border:none;
-border-radius:30px;
 background:#ff2d75;
-color:#fff;
+color:white;
+border:none;
+padding:12px 25px;
+font-size:18px;
+border-radius:30px;
 cursor:pointer;
-transition:.3s;
 }
 
 button:hover{
@@ -63,15 +57,14 @@ background:#ff0a61;
 
 .heart{
 position:absolute;
-top:-50px;
 color:red;
-animation:fall linear forwards;
-pointer-events:none;
+font-size:20px;
+animation:fall 6s linear infinite;
 }
 
 @keyframes fall{
 0%{
-transform:translateY(-50px);
+transform:translateY(-100px);
 opacity:1;
 }
 100%{
@@ -79,81 +72,41 @@ transform:translateY(110vh);
 opacity:0;
 }
 }
-
-@keyframes pop{
-from{
-transform:scale(.7);
-opacity:0;
-}
-to{
-transform:scale(1);
-opacity:1;
-}
-}
 </style>
 
 </head>
+
 <body>
 
 <div class="card">
 
-<h1>🎂 Happy Birthday<br>Sofiya ❤️</h1>
+<h1>🎂 Happy Birthday Sofiya ❤️</h1>
 
 <p>
 Wishing you endless happiness,<br>
 smiles and love. ✨
 </p>
 
-<button onclick="openSurprise()">
+<button onclick="location.href='gallery.html'">
 Open Surprise 🎁
 </button>
 
 </div>
 
-<audio id="bgMusic" loop>
-<source src="music/love.mp3" type="audio/mpeg">
-</audio>
-
 <script>
-
-const music=document.getElementById("bgMusic");
-
-function startMusic(){
-music.play().catch(()=>{});
-}
-
-document.addEventListener("click",startMusic,{once:true});
-document.addEventListener("touchstart",startMusic,{once:true});
-
-function openSurprise(){
-music.play().catch(()=>{});
-setTimeout(()=>{
-window.location.href="gallery.html";
-},500);
-}
-
 setInterval(()=>{
-
 const heart=document.createElement("div");
-
 heart.className="heart";
-
 heart.innerHTML="❤️";
-
 heart.style.left=Math.random()*100+"vw";
-
-heart.style.fontSize=(18+Math.random()*20)+"px";
-
-heart.style.animationDuration=(4+Math.random()*3)+"s";
-
+heart.style.fontSize=(15+Math.random()*20)+"px";
 document.body.appendChild(heart);
 
 setTimeout(()=>{
 heart.remove();
-},7000);
+},6000);
 
-},300);
-
+},400);
 </script>
 
 </body>
