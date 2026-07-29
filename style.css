@@ -107,7 +107,7 @@ button:hover{
     }
 }
 .gallery{
-    display:grid;
+    display:none;
     grid-template-columns:repeat(2,1fr);
     gap:10px;
     margin-top:20px;
