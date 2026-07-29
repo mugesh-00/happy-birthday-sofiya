@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday Sofiya ❤️</title>
-<link rel="stylesheet" href="style.css">
 
 <style>
 *{
@@ -15,7 +14,7 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#ff4e8a,#ff9ec4);
+background:linear-gradient(135deg,#ff5fa2,#ff7eb3);
 display:flex;
 justify-content:center;
 align-items:center;
@@ -28,186 +27,87 @@ background:white;
 padding:30px;
 border-radius:20px;
 text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,.3);
-animation:pop 1s ease;
 max-width:350px;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
 h1{
 color:#ff2d75;
-font-size:32px;
 margin-bottom:15px;
 }
 
 p{
-font-size:18px;
-color:#444;
+color:#555;
 margin-bottom:20px;
 }
 
 button{
-padding:12px 25px;
-font-size:18px;
-border:none;
-border-radius:30px;
 background:#ff2d75;
 color:white;
+border:none;
+padding:12px 25px;
+font-size:18px;
+border-radius:30px;
 cursor:pointer;
 }
 
 button:hover{
-background:#ff0055;
+background:#ff0a61;
 }
 
-#msg{
-display:none;
-margin-top:20px;
+.heart{
+position:absolute;
+color:red;
 font-size:20px;
-color:#e91e63;
-font-weight:bold;
-animation:fade 1s;
+animation:fall 6s linear infinite;
 }
 
-@keyframes pop{
-from{
-transform:scale(.5);
-opacity:0;
-}
-to{
-transform:scale(1);
+@keyframes fall{
+0%{
+transform:translateY(-100px);
 opacity:1;
 }
-}
-
-@keyframes fade{
-from{
+100%{
+transform:translateY(110vh);
 opacity:0;
-}
-to{
-opacity:1;
 }
 }
 </style>
+
 </head>
 
 <body>
 
 <div class="card">
+
 <h1>🎂 Happy Birthday Sofiya ❤️</h1>
 
-<p>Wishing you endless happiness, smiles and love. ✨</p>
-
-<<button onclick="showMessage()">Open Surprise 🎁</button>
-<div class="gallery">
-  <h2>📸 Our Memories ❤️</h2>
-
-  <img src="images/IMG-20251009-WA0004.jpg">
-  <img src="images/IMG-20251013-WA0054.jpg">
-  <img src="images/IMG-20251017-WA0032.jpg">
-  <img src="images/IMG_20250712_102538.jpg">
-  <img src="images/IMG_20250712_102603.jpg">
-  <img src="images/SAVE_20251104_203151.jpg">
-  <img src="images/SAVE_20251104_203432_1762999286112.jpg">
-  <img src="images/SAVE_20251104_203517.jpg">
-  <img src="images/Screenshot_2026-07-16-11-45-37-908.jpg">
-  <img src="images/Snapchat-551487055.jpg">
-</div>
-<div id="msg">
-
-<h2>💌 A Letter From My Heart 💌</h2>
-
 <p>
-
-Dear <b>Sofiya Sri</b>, ❤️
-
-<br><br>
-
-🎂 Happy Birthday to the most beautiful girl in my life.
-
-<br><br>
-
-Indha naal unakku romba special...
-Aana enakku, indha naal adhavida special.
-Yenna na, innaiku naan en manasula irukkura unmaiyana feelings-ah un kitta solla poren.
-
-<br><br>
-
-Nee en life-la vandha naal lendhu,
-en sirippukku reason nee,
-en santhoshathukku reason nee,
-en future pathi yosikka vechadhum nee dhaan.
-
-<br><br>
-
-Unna paakum bodhellam,
-en heart konjam adhigama beat aagudhu.
-Un kooda pesura ovvoru nimishamum
-enakku oru beautiful memory.
-
-<br><br>
-
-❤️ Sofiya...
-
-I don't know what tomorrow brings...
-But I know one thing...
-
-<b>I Truly Love You. ❤️</b>
-
-<br><br>
-
-Un birthday-la naan ketkura ore oru gift...
-
-💍 <b>Will You Be Mine Forever?</b>
-
-<br><br>
-
-Un kooda sirikka...
-Un kooda nadakka...
-Un kooda life fulla irukka...
-
-Enakku oru chance kudupiya?
-
-<br><br>
-
-No matter what happens...
-I promise to respect you,
-care for you,
-support you,
-and stand by your side.
-
-<br><br>
-
-❤️ Happy Birthday My Queen ❤️
-
-<br><br>
-
-Forever Yours,
-
-<br>
-
-<b>Mugesh ❤️</b>
-
+Wishing you endless happiness,<br>
+smiles and love. ✨
 </p>
 
-</div>
-</div>
-<div id="proposal" style="text-align:center; margin-top:25px; display:none;">
-
-<h2>💍 Will You Be Mine Forever? ❤️</h2>
-
-<button onclick="yesAnswer()">💖 Yes</button>
-
-<button id="noBtn" onmouseover="moveButton()">💔 No</button>
+<button onclick="location.href='gallery.html'">
+Open Surprise 🎁
+</button>
 
 </div>
-<div id="hearts"></div>
 
-<audio id="bgMusic">
-  <source src="music/love.mp3" type="audio/mpeg">
-</audio>
+<script>
+setInterval(()=>{
+const heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(15+Math.random()*20)+"px";
+document.body.appendChild(heart);
 
-<canvas id="fireworks"></canvas>
-  
-<script src="script.js"></script>
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+},400);
+</script>
+
 </body>
 </html>
