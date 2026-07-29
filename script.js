@@ -56,3 +56,23 @@ function firework() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     }, 500);
 }
+setInterval(() => {
+    const rose = document.createElement("div");
+    rose.innerHTML = "🌹";
+    rose.style.position = "fixed";
+    rose.style.left = Math.random() * window.innerWidth + "px";
+    rose.style.top = "-50px";
+    rose.style.fontSize = (20 + Math.random() * 20) + "px";
+    rose.style.transition = "transform 6s linear";
+
+    document.body.appendChild(rose);
+
+    setTimeout(() => {
+        rose.style.transform =
+            "translateY(" + (window.innerHeight + 100) + "px)";
+    }, 100);
+
+    setTimeout(() => {
+        rose.remove();
+    }, 6000);
+}, 800);
