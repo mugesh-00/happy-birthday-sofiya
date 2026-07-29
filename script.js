@@ -2,9 +2,7 @@
 function showMessage() {
     document.getElementById("msg").style.display = "block";
     document.querySelector(".gallery").style.display = "grid";
-    const music = document.getElementById("bgMusic");
-    music.currentTime = 0;
-    music.play().catch(error => console.log(error));
+    document.getElementById("proposal").style.display = "block";
 }
 setInterval(() => {
     const heart = document.createElement("div");
@@ -19,3 +17,14 @@ setInterval(() => {
         heart.remove();
     }, 5000);
 }, 300);
+function yesAnswer(){
+    alert("❤️ Thank You My Love ❤️\nYou made me the happiest person in the world! 🥹💖");
+}
+
+function moveButton(){
+    const btn = document.getElementById("noBtn");
+
+    btn.style.position = "absolute";
+    btn.style.left = Math.random()*250 + "px";
+    btn.style.top = Math.random()*250 + "px";
+}
