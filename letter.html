@@ -20,16 +20,18 @@ justify-content:center;
 align-items:center;
 min-height:100vh;
 padding:20px;
+overflow-x:hidden;
 }
 
 .letter{
-max-width:700px;
 background:white;
+max-width:700px;
+width:100%;
 padding:30px;
 border-radius:20px;
 box-shadow:0 10px 25px rgba(0,0,0,.2);
-line-height:1.8;
 text-align:center;
+line-height:1.9;
 }
 
 h1{
@@ -38,23 +40,42 @@ margin-bottom:20px;
 }
 
 p{
-color:#444;
 font-size:18px;
+color:#444;
 }
 
 button{
-margin-top:30px;
-background:#ff2d75;
-color:white;
-border:none;
+margin-top:25px;
 padding:12px 30px;
 font-size:18px;
+border:none;
 border-radius:30px;
+background:#ff2d75;
+color:white;
 cursor:pointer;
 }
 
 button:hover{
 background:#ff0a61;
+}
+
+.heart{
+position:fixed;
+top:-40px;
+color:red;
+pointer-events:none;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-40px);
+opacity:1;
+}
+100%{
+transform:translateY(110vh);
+opacity:0;
+}
 }
 </style>
 </head>
@@ -67,59 +88,95 @@ background:#ff0a61;
 
 <p>
 
-💌 Dear My✨🤍... ❤️
-
 Happy Birthday, My Beautiful Girl... 🎂❤️
 
 Indha letter ezhuthura nerathula enakku evlo emotions irukku nu words-la solla romba kashtam.
 
 Un birthday-ku expensive gift kudukka mudiyala...
-Periya surprise kudukka mudiyala...
-Aana en idhayathula irukkura unmaiyana anbu mattum indha letter moolama un kitta sollanum-nu dhaan aasai.
+Aana en idhayathula irukkura unmaiyana anbu dhaan indha surprise.
 
-Mine🫵🏻...
+Nee en life-la vandhadhukku apram dhaan,
+oruthar namma life-a ivlo azhaga maatha mudiyumnu purinjadhu.
 
-Nee en life-la vandhadhukku apram dhaan, oruthar namma life-a ivlo azhaga maatha mudiyumnu purinjadhu.
+Un smile paatha en problems ellam marandhuruven.
+Un message vandha en face-la automatic-ah smile vandhurum.
 
-Un smile paatha en problems konjam neram marandhuruven.
-Un message vandha en face-la automatic-ah oru smile vandhurum.
-Un peru kettale en heart konjam adhigama beat aagum.
+Na unna unmaiya nesikkuren. ❤️
 
-Idhellam love-na...
-Aama...
-Na unna romba romba love panren. ❤️
+Life-la edhu nadandhaalum...
+Na unnai respect pannuven...
+Care pannuven...
+Support pannuven...
+Un happiness-ku reason-a iruka try pannuven.
 
-Na un kitta perfection expect pannala.
-Nee eppadi irukkiyo apdiye enakku pidikkum.
-
-Un happiness dhaan enakku mukkiyam.
-Un smile dhaan enakku biggest gift.
-
-Na eppovume un life-la oru nalla person-ah irukanum.
-Nee kashtapadra nerathula un kai pudikka oruthan-ah irukanum.
-Nee sirikkura nerathula unna vida adhigama santhoshapadra oruthan-ah irukanum.
-
-Life namma ninaikkura madhiri eppovum irukkadhu.
-Neraya ups and downs varum.
-Aana oru naal kooda unna thaniya feel panna vida maatten-nu en manasukulla promise panniruken.
-
-Daily night thoongurathukku munnadiyum...
-Morning ezhundhadhum...
-Un happiness-kaaga dhaan kadavul kitta pray panren.
-
-Indha birthday-la...
-Na kadavul kitta kekkura ore oru wish...
+Indha birthday-la naan kadavul kitta kekkura ore oru wish...
 
 Nee eppovume happy-ah irukanum...
 Healthy-ah irukanum...
-Un dreams ellam nijam aaganum...
-Un face-la irukkura smile eppovume maraya koodadhu. ❤️
+Un face-la smile eppovume irukanum. ❤️
 
-En life-la enna nadandhaalum...
-En manasula unakku irukkura idam mattum eppovume maaradhu.
+Happy Birthday Once Again, My Queen... 👑❤️
 
-Thank you...
-En life-ku vandhadhukku...
+Forever Yours,
+
+<b>Mugesh ❤️</b>
+
+</p>
+
+<button onclick="nextPage()">
+Continue ❤️
+</button>
+
+</div>
+
+<audio id="bgMusic" loop>
+<source src="music/love.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+const music=document.getElementById("bgMusic");
+
+function startMusic(){
+music.play().catch(()=>{});
+}
+
+document.addEventListener("click",startMusic,{once:true});
+document.addEventListener("touchstart",startMusic,{once:true});
+
+function nextPage(){
+music.play().catch(()=>{});
+setTimeout(()=>{
+window.location.href="propose.html";
+},500);
+}
+
+setInterval(()=>{
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(15+Math.random()*20)+"px";
+
+heart.style.animationDuration=(4+Math.random()*3)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},7000);
+
+},350);
+
+</script>
+
+</body>
+</html>
 En memories-ku meaning kuduthadhukku...
 En heart-ku ivlo love feel panna vachadhukku...
 
