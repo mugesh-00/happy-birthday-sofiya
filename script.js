@@ -2,7 +2,9 @@
 function showMessage() {
     document.getElementById("msg").style.display = "block";
     document.querySelector(".gallery").style.display = "grid";
-    document.getElementById("bgMusic").play();
+    const music = document.getElementById("bgMusic");
+    music.currentTime = 0;
+    music.play().catch(error => console.log(error));
 }
 setInterval(() => {
     const heart = document.createElement("div");
