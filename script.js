@@ -1,12 +1,7 @@
 
 function showMessage() {
-    const msg = document.getElementById("msg");
-
-    if (msg.style.display === "block") {
-        msg.style.display = "none";
-    } else {
-        msg.style.display = "block";
-    }
+    document.getElementById("msg").style.display = "block";
+    document.querySelector(".gallery").style.display = "grid";
 }
 setInterval(() => {
     const heart = document.createElement("div");
