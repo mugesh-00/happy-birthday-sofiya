@@ -6,71 +6,116 @@
 <title>Will You Be Mine? ❤️</title>
 
 <style>
-body{
-    margin:0;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#ff8fb1,#ff4f81);
-    font-family:Arial,sans-serif;
-    overflow:hidden;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
-.box{
-    text-align:center;
-    color:white;
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff5fa2,#ff7eb3);
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+max-width:400px;
 }
 
 h1{
-    font-size:32px;
-    margin-bottom:30px;
+color:#ff2d75;
+margin-bottom:20px;
+font-size:28px;
+}
+
+p{
+font-size:18px;
+color:#555;
+margin-bottom:25px;
 }
 
 button{
-    padding:12px 30px;
-    font-size:20px;
-    border:none;
-    border-radius:30px;
-    cursor:pointer;
-    margin:10px;
+padding:12px 30px;
+font-size:18px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+margin:10px;
+transition:.3s;
 }
 
-#yes{
-    background:#ffffff;
-    color:#ff2d75;
+#yesBtn{
+background:#ff2d75;
+color:white;
 }
 
-#no{
-    background:#ff2d75;
-    color:white;
-    position:absolute;
+#yesBtn:hover{
+background:#ff0a61;
+}
+
+#noBtn{
+background:#666;
+color:white;
+position:absolute;
+}
+
+#message{
+display:none;
+margin-top:20px;
+font-size:22px;
+color:#ff2d75;
+font-weight:bold;
 }
 </style>
 </head>
 
 <body>
 
-<div class="box">
-    <h1>💖 Sofiya, Will You Be Mine Forever? 💖</h1>
+<div class="container">
 
-    <button id="yes" onclick="yesClick()">Yes ❤️</button>
+<h1>💍 Will You Be Mine Forever? ❤️</h1>
 
-    <button id="no">No 💔</button>
+<p>
+Sofiya... ❤️<br><br>
+Will you stay with me forever?
+</p>
+
+<button id="yesBtn" onclick="yesAnswer()">Yes ❤️</button>
+
+<button id="noBtn">No 💔</button>
+
+<div id="message">
+❤️ Yaaay! ❤️<br><br>
+Thank You My Love 🥹💕<br>
+Happy Birthday Once Again ❤️
+</div>
+
 </div>
 
 <script>
-function yesClick(){
-    alert("Yay! ❤️ I Love You Forever, Sofiya 🥹💕");
-    window.location.href="index.html";
-}
+const noBtn=document.getElementById("noBtn");
 
-const no=document.getElementById("no");
-
-no.addEventListener("mouseover",function(){
-    no.style.left=Math.random()*(window.innerWidth-120)+"px";
-    no.style.top=Math.random()*(window.innerHeight-60)+"px";
+noBtn.addEventListener("mouseover",()=>{
+noBtn.style.left=Math.random()*(window.innerWidth-120)+"px";
+noBtn.style.top=Math.random()*(window.innerHeight-60)+"px";
 });
+
+function yesAnswer(){
+document.getElementById("message").style.display="block";
+
+setTimeout(()=>{
+window.location.href="index.html";
+},4000);
+}
 </script>
 
 </body>
