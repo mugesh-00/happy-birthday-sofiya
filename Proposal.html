@@ -81,26 +81,41 @@ font-weight:bold;
 <body>
 
 <div class="container">
+<div id="successPage" style="display:none;">
+    <h1>💖 She Said YES! 💖</h1>
 
-<h1>💍 Will You Be Mine Forever? ❤️</h1>
+    <p style="font-size:22px;line-height:1.8;max-width:700px;margin:auto;padding:20px;">
 
-<p>
-Sofiya... ❤️<br><br>
-Will you stay with me forever?
-</p>
+    Inime en smile-ku reason nee...<br>
+    En life-ku meaning-um nee dhaan. ❤️
 
-<button id="yesBtn" onclick="yesAnswer()">Yes ❤️</button>
+    <br><br>
 
-<button id="noBtn">No 💔</button>
+    Inime ovvoru birthday-yum...
+    Ovvoru smile-um...
+    Ovvoru dream-um...
+    Un kooda celebrate pannanum. 🥹❤️
 
-<div id="message">
-❤️ Yaaay! ❤️<br><br>
-Thank You My Love 🥹💕<br>
-Happy Birthday Once Again ❤️
+    <br><br>
+
+    I promise...
+    Unna eppovum respect pannuven,
+    care pannuven,
+    support pannuven,
+    endha situation-layum un kaiya vida maatten. 🤝❤️
+
+    <br><br>
+
+    I Love You Today...
+    Tomorrow...
+    And Forever... ❤️♾️
+
+    </p>
+
+    <button onclick="location.href='index.html'">
+        ❤️ Forever Begins Here ❤️
+    </button>
 </div>
-
-</div>
-
 <script>
 const noBtn=document.getElementById("noBtn");
 
@@ -110,11 +125,13 @@ noBtn.style.top=Math.random()*(window.innerHeight-60)+"px";
 });
 
 function yesAnswer(){
-document.getElementById("message").style.display="block";
 
-setTimeout(()=>{
-window.location.href="index.html";
-},4000);
+document.querySelector(".container").style.display="none";
+
+document.getElementById("successPage").style.display="block";
+
+document.body.style.background="linear-gradient(135deg,#ff4d88,#ff99c8)";
+
 }
 </script>
 
